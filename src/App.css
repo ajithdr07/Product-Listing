@@ -1,38 +1,192 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-right-container {
+    display: flex;
+    gap: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home-link {
+    color: #222;
 }
 
-.App-link {
-  color: #61dafb;
+.cart-image-container {
+    position: relative;
+    text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cart-badge {
+    position: absolute;
+    top: -16px;
+    right: -5px;
+    background-color: blueviolet;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 5px;
+}
+
+.btn-group > button {
+    padding: 6px 16px;
+    border: 1px solid grey;
+    background-color: #fefefe;
+    margin: 6px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-profile-container {
+    color: #222;
+    position: relative;
+}
+
+.profile-on-hover {
+    display: none;
+    background-color: white;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #777;
+    position: absolute;
+    right: 0;
+    width: max-content;
+}
+
+.profile-on-hover span {
+    display: block;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.nav-profile-container:hover .profile-on-hover {
+    display: block;
+}
+
+.btn-group > button.active {
+    background-color: green;
+    color: white;
+}
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.product-card {
+    width: 200px;
+    padding: 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    transition: transform .3s ease-in;
+}
+
+.product-card > p {
+    color: #222;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-detail {
+    margin-top: 16px;
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.product-detail > img {
+    width: 250px;
+    height: 300px;
+}
+
+.product-title {
+    margin: 16px 0;
+    font-weight: bold;
+}
+
+.product-description {
+    line-height: 1.5;
+}
+
+.product-rating::before {
+    content: "Rating: ";
+}
+
+.product-rating {
+    margin: 16px 0;
+}
+
+.product-detail button {
+    padding: 6px 16px;
+    border: 1px solid grey;
+    background-color: #fefefe;
+    margin: 16px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in, background-color 0.3s;
+}
+
+.product-detail button:active {
+    background-color: green;
+    color: white;
+    transform: translateY(5px);
+}
+
+.search-container {
+    flex: 1;
+    position: relative;
+}
+
+.search-box {
+    width: 95%;
+    padding: 6px;
+
+}
+
+.search-results-container {
+    position: absolute;
+    width: 95%;
+    background-color: #fefefe;
+    max-height: 150px;
+    overflow-y: scroll;
+    border: 1px solid #555;
+}
+
+.search-results-container > p {
+    padding: 6px 0;
+    border-bottom: 1px solid #222;
+}
+
+.cart-page-container {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.page-not-found {
+    margin: 16px;
 }
